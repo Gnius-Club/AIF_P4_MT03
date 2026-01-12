@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playbook-P4-TM03</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 7 - 4to primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 03 - 4o de Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,376 +38,404 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de Aprendizaje:</strong>
-                                    <p>Al final de la sesión, los estudiantes podrán:</p>
-                                    <ul>
-                                        <li>Programar los LEDs RGB del Cutebot para que se enciendan en diferentes colores.</li>
-                                        <li>Utilizar las luces como una forma de comunicación visual.</li>
-                                        <li>Comprender el concepto de señalización en la robótica.</li>
-                                    </ul>
-                                    <strong>Objetivo General de la Sesión:</strong>
-                                    <p>Que los estudiantes aprendan a controlar los LEDs del Cutebot y entiendan cómo las luces sirven como herramienta de comunicación.</p>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li>⚡ Actividad 1: Saludo de I.A. con todos</li>
-                                        <li>⚡ Actividad 2: I Can Statement + Ejemplificación</li>
-                                        <li>⚡ Actividad 3: AI GYM</li>
-                                        <li>⚡ Actividad 4: Brain Spark</li>
-                                        <li>⚡ Actividad 5: Gnius STORM (Think-Pair-Share)</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Programa en Micro:bit que controla los LEDs RGB del Cutebot para mostrar diferentes colores o secuencias de colores, comunicando una idea simple, creado a partir de tu plan (GCS) generado con la IA.</li>
-                                        <li>Participación en la discusión sobre señalización robótica y comunicación visual.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Chat de "Agente Gnius" (Xolo) activo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-11).</li>
-                                        <li>Robots Cutebot (1 por cada 2 estudiantes).</li>
-                                        <li>Micro:bits y baterías (1 por cada 2 estudiantes).</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>).</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet.</li>
-                                                <li>Confirmar acceso y funcionamiento de la plataforma de programación del día (MakeCode).</li>
-                                                <li>Asegurar disponibilidad y carga de los dispositivos físicos (Cutebots, Micro:bits).</li>
-                                                <li>Tener la presentación de diapositivas lista y en orden.</li>
-                                                <li>Probar el chat "Agente Gnius" (Xolo) para asegurar su operatividad.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Revisar el flujo de la sesión, los diálogos sugeridos y los tiempos de cada actividad.</li>
-                                        <li><strong>Ejemplo Profesor:</strong> <b>⚠️ Crítico:</b> Tener listo y funcional tu proyecto de ejemplo en el Cutebot físico (cambiando colores). Este paso es clave para modelar la tarea y asegurar que los estudiantes comprendan el objetivo.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar Micro:Bit y Cutebot para controlar LEDs RGB y crear secuencias simples para señalización robótica como comunicación visual y comprender la importancia de la claridad en la comunicación.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Xolo, hoy quiero entender cómo los robots se comunican sin palabras. Explícame cómo usan luces para mandar señales (como semáforos o emociones). Luego ayúdame a programar los LEDs del Cutebot para cambiar colores, primero uno y luego ambos. Quiero que me enseñes cómo elegir colores con intención (por ejemplo: rojo = peligro, verde = avanzar) y cómo esa comunicación debe ser clara para que otras personas entiendan lo que el robot está tratando de decir.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Señalización robótica: Es como cuando usamos gestos o luces de colores para decir algo sin hablar, ayudando a que otros entiendan qué va a hacer el robot.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar las luces de colores del Cutebot para enviar mensajes visuales.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes combinaciones de colores y tiempos de espera para entender limitaciones en la claridad del mensaje.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> 1 Micro:bit por cada 2 estudiantes</label><label><input type="checkbox"> 1 Cutebot por cada 2 estudiantes</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión Cutebot instalada</label>
+                        <label><input type="checkbox"> Baterías cargadas para los Cutebots</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'Cutebot' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no golpear, mantener en superficie plana, verificar batería y conectar el micro:bit correctamente.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre señalización robótica y luces (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el robot no responde:</strong> Verificar que la batería esté cargada y bien conectada. Revisar que el micro:bit esté correctamente insertado.</li><li><strong>Si los LEDs no encienden:</strong> Confirmar que la extensión 'Cutebot' esté instalada en MakeCode. Verificar que los bloques de 'set LED color' estén dentro del bucle correcto.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. con todos ⏰ 3 minutos</h2>
-                <p>El chatbot da la bienvenida y genera entusiasmo por la nueva aventura tecnológica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Saludo de I.A. con todos ⏰ 0.5 minutos</h3>
-                            <p>(Proyectar Diapositiva 2). Da la bienvenida a los alumnos con energía, introduce brevemente la emoción de la misión del día sin revelar detalles, e instrúyeles claramente cómo activar a Xolo con sus gustos/intereses.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"¡Hola, brillantes programadores! Hoy vamos a darle a nuestro <strong>Cutebot</strong> una forma muy colorida de 'hablar'. ¿Alguna vez han visto cómo las <strong>luces</strong> de un aparato nos dicen si está encendido, cargando o si hay algún mensaje? ¡Hoy haremos que <strong>Cutebot</strong> se exprese con sus propias luces! Antes de empezar, vamos a activar a nuestro amigo <strong>Xolo</strong>. Por favor, salúdenlo en el chat y díganle su nombre y cuáles son sus gustos e intereses. Por ejemplo: <strong>'Hola Xolo, soy [Nombre] y mis gustos son [los arcoíris y las fiestas]'</strong>."</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                      <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Saludo de I.A. con todos ⏰ 2.5 minutos</h3>
-                            <p>Monitorea a los alumnos mientras interactúan con Xolo. Asegúrate de que todos reciban una respuesta y resuelve cualquier problema técnico.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Genial! <strong>Xolo</strong> ya está con nosotros y listo para esta colorida misión. Si alguien no ha recibido respuesta de <strong>Xolo</strong>, levante la mano.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos un lenguaje de luces a sus Cutebots!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Comunicación visual y señalización robótica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A controlar los LEDs RGB del Cutebot para que envíe mensajes claros con colores.</p>
+                        <p><strong>Aplicación real:</strong> Los semáforos y los autos en las calles usan esta tecnología para avisar a otros conductores y peatones qué van a hacer.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: I Can Statement + Ejemplificación ⏰ 5 minutos</h2>
-                <p>Presentar el objetivo de la clase: controlar los LEDs RGB del Cutebot y entender la comunicación visual.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Introducción y Contextualización ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 3). Introduce el concepto de comunicación con luces, señalando los LEDs RGB del Cutebot y dando ejemplos del mundo real.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ya sabemos que nuestro <strong>Cutebot</strong> puede moverse. Pero, ¿cómo podría decirnos algo sin hablar? ¡Con <strong>luces</strong>! Fíjense aquí (señala los <strong>LEDs RGB</strong> del <strong>Cutebot</strong>). Estos son los <strong>LEDs RGB</strong>. <strong>'RGB'</strong> significa Rojo, Verde y Azul, y combinando estos colores, ¡podemos crear muchísimos más! Piensen en un semáforo... o incluso en las luces de un control de videojuegos, que nos dicen si está cargando o conectado.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Presentación del Proyecto del Profesor ⏰ 1 minuto</h3>
-                            <p>Muestra tu proyecto de ejemplo (Cutebot cambiando los colores de los LEDs) ya cargado y funcionando. Esta es una demostración en vivo, no se proyecta diapositiva.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Para que vean lo que podemos lograr, les mostraré un ejemplo. (Muestra el <strong>Cutebot</strong> cambiando el color de sus <strong>LEDs</strong> a rojo, luego a azul, luego a verde). Miren cómo puedo hacer que sus luces cambien de color. Mi <strong>'idea'</strong> fue simple: quería que mi <strong>Cutebot</strong> mostrara diferentes colores para ver cómo funciona.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: "I Can Statement" y Conexión ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 4). Presenta formalmente el 'I Can Statement' y conecta el ejemplo mostrado con lo que los alumnos crearán.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo encender y cambiar los colores de los LEDs del Cutebot.</li>
+                            <li>Introduce el concepto de señalización y por qué los colores deben tener un significado claro.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar los LEDs del Cutebot para cambiar colores.</li>
+                            <li>Aprender sobre la importancia de la claridad en los mensajes visuales.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Hoy vamos a aprender a programar estas <strong>luces</strong> para que cambien de color. Al final de la clase, podrán decir: '<strong>Yo puedo programar los LEDs de mi Cutebot para que muestren diferentes colores y comuniquen una idea simple usando tu plan (GCS)</strong>.' ¡Vamos a darle color a nuestros robots!</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar los LEDs del Cutebot para enviar señales y entender la comunicación visual.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a descubrir un secreto increíble: ¡cómo hablan los robots sin decir una sola palabra! Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre las luces y señales del Cutebot. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Pregúntenle cómo pueden hacer que su robot use colores para dar mensajes. Si algo no les queda claro, ¡no duden en preguntarle de nuevo! XOLO es el experto en lenguaje robótico y está aquí para ayudarlos a ser unos maestros de las señales.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: AI GYM ⏰ 5 minutos</h2>
-                <p>Introducir los comandos GCS para los LEDs y el concepto de señalización robótica.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción Inicial y Contextualización de la IA ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 5). Presenta el A.I. GYM y da una instrucción clara a los alumnos sobre cómo pedir la información a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Genios, es momento de entrar al <strong>A.I. GYM</strong>! 🧠💪 <strong>Xolo</strong> nos va a enseñar los <strong>comandos</strong> de <strong>tu plan (GCS)</strong> para controlar las <strong>luces</strong> del <strong>Cutebot</strong> y nos hablará de la <strong>'señalización robótica'</strong>. Para que la explicación sea personalizada, escriban en el chat: <strong>"Mi perfil es [escribe aquí tu perfil] y quiero que me enseñes sobre la comunicación visual en robots. Para ello, quiero aprender a programar los LEDs RGB del Cutebot usando el bloque "cutebot_led_izquierdo(color)"."</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Interacción Guiada y Ejemplo de Plan (GCS) ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositivas 6 y 7). Monitorea a los alumnos mientras interactúan con Xolo. Xolo les explicará los comandos para los LEDs (izquierdo, derecho, todos, apagar) y el concepto de comunicación visual en robots (ej. robot de fábrica, Cutebot explorador).</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Cutebots conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique señales de luces con significado.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar luces como código secreto.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar el micro:bit al Cutebot y probar las luces.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Xolo, quiero inventar un proyecto donde el Cutebot use luces como si fuera un robot mensajero. Ayúdame a crear un VIBE donde las luces signifiquen algo (por ejemplo: “sígueme”, “alto”, “estoy buscando”). Después convierte mi idea en un GCS donde el robot encienda colores específicos y siga una pequeña secuencia. Quiero que el GCS parezca un código secreto de comunicación robótica."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras los alumnos interactúan con Xolo) ¡Excelente! <strong>Xolo</strong> les está mostrando los <strong>comandos</strong> para encender los <strong>LEDs</strong> del <strong>Cutebot</strong> del color que quieran: <strong>`cutebot_led_izquierdo(COLOR)`</strong>, <strong>`cutebot_led_derecho(COLOR)`</strong>, <strong>`cutebot_todos_los_led(COLOR)`</strong> y <strong>`cutebot_apagar_leds()`</strong>. También les está explicando que esto se llama <strong>'señalización robótica'</strong>, ¡una forma en que los robots <strong>comunican sin palabras</strong>! Como un robot en una fábrica que cambia su luz para decir 'Necesito ayuda', o si nuestro <strong>Cutebot</strong> usa luces para indicar 'camino libre' o 'peligro'.</p>
-                                <p class="dialogue assistant">Para que vean cómo se usan estos comandos, <strong>Xolo</strong> podría mostrarles un <strong>plan (GCS)</strong> de ejemplo, como encender un LED de un color y luego otro:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">
-POR SIEMPRE:
-    cutebot_led_izquierdo(ROJO)
-    ESPERAR 1 segundo
-    cutebot_led_derecho(AZUL)
-    ESPERAR 1 segundo
-    cutebot_apagar_leds()
-    ESPERAR 1 segundo
-                                </pre>
-                                <p class="dialogue assistant">Si algo no queda claro, ¡recuerden que pueden preguntarle directamente a <strong>Xolo</strong>! Prueben con: <br>
-                                <strong>'Xolo, ¿qué otros colores puedo usar para los LEDs?'</strong><br>
-                                <strong>'¿Puedes darme un ejemplo de señalización robótica relacionado con [sus gustos/intereses]?'</strong><br>
-                                <strong>'¿Por qué es útil la comunicación visual en lugares ruidosos?'</strong></p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El Cutebot enciende los colores en el orden que planeaste?</li>
+                            <li>¿Qué pasa si intentas poner dos colores al mismo tiempo en el mismo LED?</li>
+                            <li>¿Se ven igual de claros los colores en un lugar con mucha luz vs. uno oscuro?</li>
+                            <li>Si alguien ve tu robot, ¿podría adivinar qué significa cada color sin que tú se lo digas?</li>
+                            <li>¿Por qué es importante que el robot no cambie de colores demasiado rápido para que el mensaje sea claro?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear, genios! Vamos a convertir a nuestro Cutebot en un mensajero secreto. El flujo es sencillo: platiquen su idea con XOLO, definan el VIBE de su mensaje, obtengan su GCS y pásenlo a bloques en MakeCode. Por ejemplo, podrían crear un robot que avise cuando está buscando algo con luces amarillas y cambie a verde cuando lo encuentre. Prueben primero en el simulador y, cuando estén listos, yo les daré su Cutebot para la prueba real. Recuerden las preguntas de experimentación para ver si sus señales son claras. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su código secreto.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con señales básicas. ¿Puedes enseñarme cómo hacer que mi Cutebot parpadee las luces como una patrulla de emergencia?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark ⏰ 20 minutos</h2>
-                <p>Poner en práctica el control de LEDs a través de una experiencia de codificación creativa.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Introducción al Brain Spark ⏰ 1 minutos</h3>
-                            <p>(Proyectar Diapositiva 8). Presenta la actividad como la fase creativa principal de la sesión. Recuerda a los alumnos que trabajarán en parejas y compartirán el material (Cutebot y Micro:bit).</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Tiempo, genios! Ahora vamos a la parte más creativa, el <strong>Brain Spark</strong>. Aquí es donde ustedes le darán a su <strong>Cutebot</strong> una forma de <strong>'hablar' con luces</strong>, diseñando su propia <strong>señal visual</strong>. Recuerden que trabajarán en parejas, así que necesitarán compartir el <strong>Cutebot</strong> y el <strong>Micro:bit</strong> para programar y probar.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Ideación (La "idea" de la Señal Visual) ⏰ 3 minutos</h3>
-                            <p>Anima a los alumnos a pensar en una 'idea' individual para comunicar con las luces de su Cutebot. Deberán organizarse con su compañero para turnarse al programar y probar sus respectivas ideas, ya que comparten el material.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">¿Qué quieren que comunique su <strong>Cutebot</strong> con sus luces? Quizás quieran que parezca un coche de policía con luces intermitentes rojas y azules. O que muestre una luz verde cuando esté 'feliz' (avanzando) y una roja cuando esté 'parado'. ¡O incluso un arcoíris! Tómense un momento para pensar en su <strong>'idea'</strong> individual de <strong>señal visual</strong>. Luego, hablen con su compañero para organizarse y decidir cómo se turnarán para usar el <strong>Cutebot</strong> y el <strong>Micro:bit</strong> para programar y probar cada una de sus ideas. Si no se les ocurre nada, pídanle a <strong>Xolo</strong>: <strong>'Exploremos ideas juntos para comunicar con las luces del Cutebot'</strong>."</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Planificación con IA (El "plan") y Logística ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 9). Guía a los alumnos sobre cómo comunicar su 'idea' a Xolo para obtener 'tu plan'. Mientras los alumnos escriben y discuten sus ideas con Xolo, asegúrate de que cada pareja tenga su Cutebot y Micro:bit.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¿Ya tienen su <strong>'idea'</strong> para la <strong>señal luminosa</strong>? ¡Excelente! Ahora, descríbansela a <strong>Xolo</strong> para que les ayude a crear <strong>'tu plan'</strong>. Por ejemplo, si su <strong>'idea'</strong> es: <strong>'Quiero que mi Cutebot parezca un coche de policía con luces intermitentes rojas y azules.'</strong></p>
-                                <p class="dialogue assistant">Basado en esa petición, <strong>Xolo</strong> podría generar <strong>'tu plan'</strong> como este para las luces de policía:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">
-POR SIEMPRE:
-    // Luz roja a un lado, azul al otro
-    cutebot_led_izquierdo(ROJO)
-    cutebot_led_derecho(AZUL)
-    ESPERAR 0.5 segundos
-
-    // Intercambiamos colores
-    cutebot_led_izquierdo(AZUL)
-    cutebot_led_derecho(ROJO)
-    ESPERAR 0.5 segundos
-                                </pre>
-                                <p class="dialogue assistant">O si quieren señalizar un giro y luego avanzar:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">
-cutebot_led_izquierdo(AMARILLO)
-cutebot_led_derecho(NEGRO) // Apaga el otro LED
-ESPERAR 2 segundos
-
-cutebot_apagar_leds()
-ESPERAR 0.5 segundos
-
-cutebot_todos_los_led(VERDE)
-cutebot_avanzar(50)
-ESPERAR 3 segundos
-cutebot_detener()
-cutebot_apagar_leds()
-                                </pre>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Implementación, Prueba y Refinamiento ⏰ 11 minutos</h3>
-                            <p>Da tiempo a los alumnos para que traduzcan 'tu plan' a bloques en MakeCode, prueben, ajusten colores y tiempos, y depuren con ayuda del chatbot si es necesario. Recordarles alternar el uso del Micro:bit y la computadora.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Antes de que comiencen a programar, considera proyectar el ejemplo de GCS de la diapositiva 9 y leerlo en voz alta para asegurar que todos entienden la estructura.</p>
-                                <p class="dialogue assistant">¡A programar esos colores! Tomen <strong>'tu plan'</strong> de <strong>Xolo</strong> y constrúyanlo en <strong>MakeCode</strong> usando los <strong>bloques de control de LEDs</strong>. Prueben en su <strong>Cutebot</strong>. ¿Los colores se ven bien? ¿La secuencia de luces comunica lo que querían? Ajusten los colores, los tiempos en los ESPERAR, o la secuencia de comandos para que la <strong>comunicación visual</strong> sea más clara o el efecto más chulo. Si tienen una <strong>'idea de mejora'</strong> como <strong>'Quiero que los colores cambien más rápido'</strong> o <strong>'Quiero añadir un color más'</strong>, ¡díganle a <strong>Xolo</strong> para modificar <strong>'tu plan'</strong>! Recuerden turnarse con su compañero.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué colores y señales funcionan mejor para comunicar su mensaje.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 5: Mejoras y Desafíos ⏰ 1 minutos</h3>
-                            <p>Ofrece desafíos adicionales para los alumnos que terminen antes.</p>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué colores comunicaron mejor el mensaje de tu Cutebot? ¿Qué te sorprendió al ver las luces de otros compañeros?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¿Su <strong>Cutebot</strong> ya es un espectáculo de luces? ¡Felicidades! Para un <strong>desafío extra</strong>: ¿Pueden combinar el <strong>cambio de luces con algún movimiento</strong>? Por ejemplo, que encienda luces rojas al detenerse. ¡Consulten con <strong>Xolo</strong> cómo podrían modificar <strong>'tu plan'</strong>!</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi Cutebot usa luces rojas y verdes para dar señales. Me sorprendió que el color azul se ve muy diferente en el robot real que en la pantalla."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM ⏰ 5 minutos</h2>
-                <p>Los alumnos muestran sus "señales" luminosas y comparten aprendizajes.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual) ⏰ 0.5 minutos</h3>
-                            <p>(Proyectar Diapositiva 10). Presenta la actividad como el momento de compartir y celebrar los proyectos.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Tiempo, artistas de la luz! Han hecho un trabajo espectacular en el <strong>Brain Spark</strong>. Ahora es el momento de mostrar sus <strong>"señales"</strong> o efectos de luces en nuestro <strong>Gnius STORM</strong>. ¿Listos para el show de luces robótico?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas) ⏰ 0.5 minutos</h3>
-                            <p>Da a los alumnos un momento corto para la reflexión individual sobre su propio proyecto.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Perfecto. Antes de mostrar su creación luminosa, piensen 30 segundos: <strong>¿Qué mensaje intentaba comunicar su Cutebot con las luces? ¿Fue fácil elegir los colores para su mensaje? ¿Qué fue lo más divertido de programar las luces?</strong></p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share - Retroalimentación) ⏰ 1.5 minutos</h3>
-                            <p>Indica a los alumnos que se junten en parejas, muestren las luces de sus Cutebots y expliquen su 'idea' de comunicación.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien! Ahora, con su compañero, cada uno va a mostrar las luces de su <strong>Cutebot</strong>. Expliquen: <strong>'Mi Cutebot intenta comunicar [su mensaje] con estas luces. Mi 'idea' fue [su objetivo].'</strong> El compañero debe observar con atención.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Gnius STORM (Reflexión Final) ⏰ 1.5 minutos</h3>
-                            <p>Guía a los alumnos para que se den retroalimentación mutua.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, la retroalimentación. Después de ver el show de luces de su compañero, díganle algo positivo y alguna idea: <br>
-                                <strong>'Me gustó mucho cómo usaste el color [color específico] para tu mensaje.'</strong><br>
-                                <strong>'¡Qué creativa tu 'idea' de usar luces para [propósito del compañero]!'</strong><br>
-                                <strong>'Quizás la próxima vez podrías intentar que los colores [sugiere una variación o nuevo efecto]...'</strong></p>
-                            </div>
-                        </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 5: Gnius STORM (Reflexión Final) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 11). Cierra la sesión conectando la experiencia práctica con los objetivos y conceptos clave.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Fantástico! Han usado colores para que su <strong>Cutebot</strong> 'hable' sin palabras. Así como los semáforos nos organizan en la calle, o las luces de estado de un dron nos dicen si está listo para volar, ustedes han logrado que su <strong>Cutebot</strong> comunique ideas. Esta <strong>'señalización robótica'</strong> es muy importante para que los humanos y los robots trabajemos juntos de forma segura y eficiente. Hoy lograron decir: '<strong>Yo puedo programar los LEDs de mi Cutebot para que muestren diferentes colores y comuniquen una idea simple usando tu plan (GCS)</strong>.' ¡Han iluminado el camino de la <strong>comunicación robótica</strong>!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
